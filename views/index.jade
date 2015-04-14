@@ -1,0 +1,15 @@
+extends layout
+
+block content
+	h1 #{title}
+	p Можете отправить мне сообщение используя форму:
+	form(style="width: 600px", class="form-horizontal", method="POST", action="", enctype="application/x-www-form-urlencoded", class="form")
+		div.form-group
+			input(class="form-control", placeholder="Ваш e-mail", type="text", size="25",value="", name="mail", required)
+		div.form-group
+			input(class="form-control", placeholder="Ваше имя", type="text", size="25", value="",, name="name" required)
+		div.form-group
+			textarea(class="form-control", placeholder="Сообщение", name="desc", cols="20", rows="5",id="desc")
+		div.form-group
+			input(type="submit", value="Отправить", class="btn btn-primary", style="margin-right: 10px;")
+			input(type="reset", name="reset", id="reset", value="Очистить", class="btn btn-default")      

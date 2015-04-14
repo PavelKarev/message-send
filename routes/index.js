@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var mandrill = require('mandrill-api/mandrill');
-var mandrill_client = new mandrill.Mandrill('N5C8oVWblINp_jwEERn0wQ');
+var mandrill_client = new mandrill.Mandrill('YOUR API KEY');
 /* GET home page. */
 router.get('/', function(req, res, next) {
   res.render('index', { title: 'Форма отправки сообщений' });

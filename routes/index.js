@@ -13,8 +13,8 @@ router.post('/', function(req, res) {
 			"subject": "send message",
 			"from_name": req.body.name,
 			"to": [{
-							"email": "karev3@yandex.ru",
-							"name": "Karev Pavel",
+							"email": "yourEmail@example.com",
+							"name": "Your Name",
 							"type": "to"
 					}]
 	};

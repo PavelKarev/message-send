@@ -20,9 +20,10 @@ router.post('/', function(req, res) {
 	};
 	mandrill_client.messages.send({"message": message}, function(result) {
 		console.log(result);
+		res.render('sent', {title : "Cообщение отправлено", message: message });
 	}, function(e) {
 		console.log('A mandrill error occurred: ' + e.name + ' - ' + e.message);
+		res.render('index', { title: 'Форма отправки сообщений', message : e.message  });
 	});
-  res.render('sent', {title : "Cообщение отправлено", message: message });
 });
 module.exports = router;
